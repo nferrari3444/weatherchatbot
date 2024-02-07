@@ -40,7 +40,6 @@ with st.sidebar:
     "\n",
     ("what the humidity in Munich?", "humidity"),
 )
-   # st.write('Most commond searchs for the Weather bot')
     tagger_component('Common Weather Queries:', 
                      ['weather','temperature','humidity','wind','weather forecast',
                       'precipitation', 'tomorrow temperature'] ,
@@ -74,13 +73,12 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
         current_date = datetime.date(year, month, day)
 
         for forecast in weather.forecasts:
-          print('forecast is ', forecast.date)
+         
           if forecast.date - timedelta(1) == current_date:
             print('The temperature for tomorrow in {} will be {} degrees Celcius'.format(location, forecast.temperature))
             
             data = 'The temperature for tomorrow in {} will be {} degrees Celcius'.format(location, forecast.temperature)
             
-          #  st.session_state.messages.append({"role": "assistant", "content": data, "intent": intent, "location": location})
             query_info = {'date': currentDate, 'intent':intent, 'location':location}
             query_records(query_info)
             st.session_state.queries.append({'date': currentDate, 'intent':intent, 'location':location})
@@ -99,7 +97,7 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
                     print('---------------------------------------------------------------------')
                     print('The weather for the next 6 hours in {} will be {} with a temperature of {}'.format(location, description,temperature))
       
-                   # st.session_state.messages.append({"role": "assistant", "content": data, "intent": intent, "location": location})
+                
                     query_info = {'date': currentDate, 'intent':intent, 'location':location}
                     query_records(query_info)
                     st.session_state.queries.append({'date': currentDate, 'intent':intent, 'location':location})
@@ -114,18 +112,9 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
                           'precipitation_city': 'There are {} probabilities of precipitations in {}'.format(weather.current.precipitation, location),
                           'wind_city': 'The wind direction in {} is {} with a velocity of {} Kmph'.format(location, weather.current.wind_direction, weather.current.wind_speed),    
                           'visibility_city': 'The current visibility in {} is {}'.format(location, weather.current.visibility),
-                          #'kind': 'There is {}'.format(weather.current.kind),
                           'weather_city': 'Currently the weather in {} is {} {}'.format(location, weather.current.description, weather.current.kind.emoji)}
-                          
-                          #'goodbye': "Can I help with more information?",
-                          #'greeting':  "Hello, Im doing well, hope that you are having a great day" }
                                                                                                     
             data = map_intent_api_data[intent]
-            #data = 'The temperature in {} is {} degrees celcius'.format(location, weather.current.temperature)  
-     
-           
-            #st.session_state.messages.append({"role": "assistant", "content": data, "intent": intent, "location": location})
-
  
             return  data
 
@@ -175,15 +164,11 @@ def botResponse(modelData, userInput):
         return asyncio.run(getweather(location, intent, forecast_next_day, forecast_day))
         
         
-        #st.session_state.messages.append({"role": "user", "content": userInput, "intent": intent, "location": location})
-
     else:
 
         try:
 
             payload = {"sender": "me",  'message': userInput, 'token': "None"}
-
-            # st.session_state.messages.append({"role": "user", "content": userInput, "intent": intent})
 
             url = 'http://localhost:5005/webhooks/rest/webhook'
 
@@ -196,23 +181,13 @@ def botResponse(modelData, userInput):
         except IndexError:
             response = 'Sorry, the assistent answer questions about weather in main cities. Make the question again please!'
         
-        #st.session_state.messages.append({"role": "assistant", "content": response, "intent": intent})
-
+       
         return response
-
-
-
-headers = ['Name', 'Age', 'Website']
-nik = {'Name': 'Nik', 'Age': 34, 'Website': 'datagy.io'}
-kate = {'Website': 'google', 'Name': 'Kate', 'Age': 33}
-
-
-
 
 if __name__ == '__main__':
 
     
-    if inputUser:= st.chat_input("What is up?"):
+    if inputUser:= st.chat_input("You can ask weather info about cities!"):
         # Display user message in chat message container
         with st.chat_message("user"):
             st.markdown(inputUser)

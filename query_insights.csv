@@ -13,9 +13,9 @@
 
 2024-02-06,"humidity_city","Prague"
 
-2024-02-06,"weather_city","Copenhage"
+2024-02-06,"weather_city","Copenhagen"
 
-2024-02-06,"temperature_city","Copenhage"
+2024-02-06,"temperature_city","Copenhagen"
 
 2024-02-06,"temperature_city","Amsterdam"
 
@@ -43,25 +43,47 @@
 
 2024-02-06,wind_city,Vienna
 
-2024-02-07,temperature_city,Budapest
-2024-02-07,wind_city,London
-2024-02-07,wind_city,Barcelona
-2024-02-07,humidity_city,Istambul
-2024-02-07,precipitation_city,Istambul
-2024-02-07,weather_city,Roma
-2024-02-07,weather_city,Berlin
-2024-02-07,weather_city,Berlin
-2024-02-07,temperature_city,Munich
-2024-02-07,weather_city,Munich
-2024-02-07,weather_next_day_forecast_city,Munich
-2024-02-07,weather_next_day_forecast_city,Munich
-2024-02-07,humidity_city,Warsaw
-2024-02-07,weather_city,Warsaw
-2024-02-07,weather_city,Krakov
-2024-02-07,temperature_city,Krakov
-2024-02-07,weather_city,Rome
-2024-02-07,temperature_city,Stockolm
-2024-02-07,visibility_city,Prague
-2024-02-07,humidity_city,Munich
-2024-02-07,weather_next_day_forecast_city,Budapest
-2024-02-07,weather_next_day_forecast_city,Budapest
+2024-02-07,temperature_city,Budapest
+
+2024-02-07,wind_city,London
+
+2024-02-07,wind_city,Barcelona
+
+2024-02-07,humidity_city,Istambul
+
+2024-02-07,precipitation_city,Istambul
+
+2024-02-07,weather_city,Rome
+
+2024-02-07,weather_city,Berlin
+
+2024-02-07,weather_city,Berlin
+
+2024-02-07,temperature_city,Munich
+
+2024-02-07,weather_city,Munich
+
+2024-02-07,weather_next_day_forecast_city,Munich
+
+2024-02-07,weather_next_day_forecast_city,Munich
+
+2024-02-07,humidity_city,Warsaw
+
+2024-02-07,weather_city,Warsaw
+
+2024-02-07,weather_city,Krakov
+
+2024-02-07,temperature_city,Krakov
+
+2024-02-07,weather_city,Rome
+
+2024-02-07,temperature_city,Stockholm
+
+2024-02-07,visibility_city,Prague
+
+2024-02-07,humidity_city,Munich
+
+2024-02-07,weather_next_day_forecast_city,Budapest
+
+2024-02-07,weather_next_day_forecast_city,Budapest
+
