@@ -16,11 +16,18 @@ intents:
   - pressure
   - precipitation
   - humidity
+  - visibility
   - wind
   - temperature
   - weather_day_forecast
   - temperature_city
   - wind_city
+  - weather_next_day_forecast
+  - humidity_city
+  - precipitation_city
+  - weather_next_day_forecast_city
+  - pressure_city
+  - visibility_city
 
 responses:
   utter_greet:

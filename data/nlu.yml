@@ -109,10 +109,8 @@ nlu:
 - intent: weather_country
   examples: |
     - what the weather in [Norway](country)
-    - what's the temperature in [Spain](country)
     - how is the weather in [Poland](country)
     - can you tell me the weather in [France](country)
-    - how is the temperature in [Portugal](country)
 
 - intent: weather_day_forecast
   examples: |
@@ -150,6 +148,14 @@ nlu:
     - what's the humidity like today
     - humidity information
 
+- intent: visibility
+  examples: |
+    - what's the visibility
+    - what's the visibility today
+    - how is the visibility
+    - what's the visibility like today
+    - visibility information
+
 - intent: pressure
   examples: |
     - what's the pressure
@@ -172,9 +178,9 @@ nlu:
     - I want to know the weather in [London](location)
     - weather for [Athens](location) please
     - what's the weather today in [Berlin](location)
-    - what's the temperature in [Washington](location) right now
+    - what's the weather in [Washington](location) right now
     - hows the weather in [Brussels](location)
-    - i want the temperature at [Rome](location)
+    - i want the weather at [Rome](location)
     - what the weather like in [Praga](location)
     - what the weather in [Naples](location)
 
@@ -182,17 +188,19 @@ nlu:
   examples: |
     - tell me the temperature in [Budapest](location)
     - how many degrees are in [Praga](location)
+    - what is the temperature in [Oslo](location)
     - what's the temperature right now in [Valencia](location)
     - i want to know the temperature in [Hamburg](location)
     - what the temperature in [Madrid](location)
 
 - intent: precipitation_city
   examples: |
-    - what's the probabilities of precipitation in [Istambul]
-    - can you tell me the precipitation in [Paris]
-    - with which probabilities it will rain today in [Prague]
-    - i want to know the precipitation in [Frankfurt]
-    - rain information in [Copenhage]
+    - what's the probabilities of precipitation in [Istambul](location)
+    - can you tell me the precipitation in [Paris](location)
+    - with which probabilities it will rain today in [Prague](location)
+    - i want to know the precipitation in [Frankfurt](location)
+    - rain information in [Copenhagen](location)
+    - how about the precipitation in [Munich](location)
 
 - intent: weather_next_day_forecast_city
   examples: |
@@ -202,8 +210,8 @@ nlu:
     - what will be the temperature tomorrow in [Roma](location)
     - tomorrow weather in [Milan](location)
     - how the weather going to be tomorrow in [Praga](location)
-    - tell me the temperature for tomorrow in [Estambul](location)
-    - I want to know the temperature for tomorrow in [Stockolm](location)
+    - tell me the temperature for tomorrow in [Istambul](location)
+    - I want to know the temperature for tomorrow in [Stockholm](location)
     - tomorrow temperature in [Marmo](location)
     - how the temperature going to be tomorrow in [Bruselas](location)
     - what is the weather forecast for tomorrow in [Berlin](location)
@@ -214,9 +222,19 @@ nlu:
     - I want to know the wind in [London](location)
     - wind for [Athens](location) please
     - what's the wind today in [Berlin](location)
-    - what's the wind in [Washington](location) right now
-    - hows the wind in [Brussels](location)
+    - what's the wind in [Vienna](location) right now
+    - how is the wind in [Brussels](location)
     - i want information of the wind at [Rome](location)
+
+- intent: visibility_city
+  examples: |
+    - tell me the visibility in [Prague](location)
+    - I want to know the visibility in [Bruges](location)
+    - visibility for [Athens](location) please
+    - what's the visibility today in [Munich](location)
+    - what's the visibility in [Naples](location) right now
+    - how is the visibility in [Florence](location)
+    - i want information of the visibility at [Milan](location)
 
 - intent: humidity_city
   examples: |
@@ -227,13 +245,28 @@ nlu:
     - what's the humidity today in [Berlin](location)
     - what the humidity in [Berlin](location)
     - what's the humidity in [Washington](location) right now
-    - hows the humidity in [Brussels](location)
+    - how is the humidity in [Brussels](location)
     - i want information of the humidity at [Rome](location)
+
+- intent: pressure_city
+  examples: |
+    - what's the pressure in [London](location)
+    - what's the pressure today in [Prague](location)
+    - how is the pressure in [Bratislava](location)
+    - what's the pressure like in [Stockholm](location)
+    - pressure information in [Berlin](location)
 
 - intent: city
   examples: |
     - [Liverpool](location)
+    - [Athens](location)
+    - [Manchester](location)
+    - [London](location)
+    - [Birmingham](location)
+    - [Bristol](location)
     - [Milan](location)
+    - [Glasgow](location)
+    - [Edinburgh](location)
     - [Frankfurt](location)
     - [Porto](location)
     - [Madrid](location)
@@ -245,7 +278,8 @@ nlu:
     - [Hamburg](location)
     - [Seville](location)
     - [Paris](location)
-    - [Stockolm](location)
+    - [Stockholm](location)
+    - [Gothenburg](location)
     - [Amsterdam](location)
     - [Rotterdam](location)
     - [Munich](location)
@@ -255,14 +289,37 @@ nlu:
     - [Montevideo](location)
     - [Moscu](location)
     - [Istambul](location)
-    - [Marseilla](location)
+    - [Marseille](location)
     - [Malmo](location)
     - [Vienna](location)
     - [Lisbon](location)
-    - [Porto](location)
-    - [Copenhage](location)
+    - [Porto](location)  
+    - [Copenhagen](location)
     - [Naples](location)
     - [Rome](location)
+    - [Bratislava](location)
+    - [Bruges](location)
+    - [Florence](location)
+    - [Milan](location)
+    - [Genoa](location)
+    - [Geneva](location)
+    - [Bern](location)
+    - [Zurich](location)
+    - [Lion](location)
+    - [Nantes](location)
+    - [Toulouse](location)
+    - [Nice](location)
+    - [Bilbao](location)
+    - [Aarhus](location)
+    - [Odense](location)
+    - [Skagen](location)
+    - [Aarhus](location)
+    - [Hamburg](location)
+    - [Bergen](location)
+    - [Warsaw](location)
+    - [Krakow](location)
+    - [Brussels](location)
+
 
 - intent: country
   examples: |
@@ -281,5 +338,10 @@ nlu:
     - [Ireland](country)
     - [United Kingdom](country)
     - [Greece](country)
+    - [Slovakia](country)
+    - [England](country)
+    - [Scotish](country)
+    - [Gales](country)
+    - [Slovakia](country)
     
   

@@ -60,6 +60,16 @@ stories:
   - slot_was_set:
     - location: Madrid
 
+- story: ask visibility for city happy path
+  steps:
+  - intent: visibility
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
 - story: ask temperature for city happy path
   steps:
   - intent: temperature

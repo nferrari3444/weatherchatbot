@@ -23,10 +23,36 @@ if "queries" not in st.session_state:
 currentDate = datetime.datetime.today().strftime('%Y-%m-%d')
 
 with st.sidebar:
+    annotated_text(
+    "Examples questions:",
+    ("What the weather in Rome?", "weather"),
+    "\n",
+    "\n",
+    ("How many degrees are in Stockholm?", "temperature"),
+    "\n",
+    "\n",
+    ("What will be the weather tomorrow in Berlin?", "weather-forecast"),
+    "\n",
+    "\n",
+    
+    ("how is the visibility in Prague?", "visibility"),
+    "\n",
+    "\n",
+    ("what the humidity in Munich?", "humidity"),
+)
    # st.write('Most commond searchs for the Weather bot')
-    tagger_component('Most Frequent Searchs:', 
+    tagger_component('Common Weather Queries:', 
                      ['weather','temperature','humidity','wind','weather forecast',
-                      'precipitation', 'tomorrow temperature'])
+                      'precipitation', 'tomorrow temperature'] ,
+
+                      color_name=["blue", "orange", "lightblue", "purple", "pink","brown", "yellow"],)
+
+    tagger_component('Cities Popular Queries:', 
+                     ['Berlin','Hamburg','Prague','Rome','Budapest' ,'Vienna',
+                      'Madrid'] ,
+
+                      color_name=["skyblue", "black", "red", "green", "pink","lightgreen", "yellow"],)
+
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -84,12 +110,12 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
       else:
             map_intent_api_data = {'temperature_city': 'The Current Temperature in {} is {} degrees Celcius'.format(location, weather.current.temperature),
                           'humidity_city' : 'The humidity in {} is {} %'.format(location, weather.current.humidity),
-                          #'pressure': 'Currently the pressure is about {}'.format(weather.current.pressure),
-                          #'precipitation': 'There are {} probabilities of precipitations'.format(weather.current.precipitation),
-                          'wind_city': 'The wind direction in {} is {} with a velocity of {} km/h'.format(location, weather.current.wind_direction, weather.current.wind_speed),    
-                          #'visibility': 'The current visibility is {}'.format(weather.current.visibility),
+                          'pressure_city': 'Currently the pressure in {} is about {}'.format(location, weather.current.pressure),
+                          'precipitation_city': 'There are {} probabilities of precipitations in {}'.format(weather.current.precipitation, location),
+                          'wind_city': 'The wind direction in {} is {} with a velocity of {} Kmph'.format(location, weather.current.wind_direction, weather.current.wind_speed),    
+                          'visibility_city': 'The current visibility in {} is {}'.format(location, weather.current.visibility),
                           #'kind': 'There is {}'.format(weather.current.kind),
-                          'weather_city': 'Currently the weather in {} is {}'.format(location, weather.current.description)}
+                          'weather_city': 'Currently the weather in {} is {} {}'.format(location, weather.current.description, weather.current.kind.emoji)}
                           
                           #'goodbye': "Can I help with more information?",
                           #'greeting':  "Hello, Im doing well, hope that you are having a great day" }
@@ -129,7 +155,7 @@ def botResponse(modelData, userInput):
 
     intent = modelData['intent']['name']
     print('intent is', intent)
-    if intent == 'weather_city' or intent == 'weather_next_day_forecast_city'  or intent == 'weather_day_forecast_city' or intent == 'humidity_city' or intent == 'wind_city' or intent == 'temperature_city':
+    if intent == 'weather_city' or intent == 'weather_next_day_forecast_city'  or intent == 'weather_day_forecast_city' or intent == 'humidity_city' or intent == 'wind_city' or intent == 'temperature_city' or intent == 'precipitation_city' or intent == 'pressure_city' or intent == 'visibility_city':
         location = modelData['entities'][0]['value']
         
         print('llega aca con el intent {}'.format(intent))
