@@ -1,0 +1,285 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: temperature
+  examples: |
+    - tell me the temperature
+    - how many degrees are
+    - what's the temperature right now
+    - i want to know the temperature
+
+- intent: weather
+  examples: |
+    - tell me the weather
+    - I want to know the weather
+    - weather please
+    - what's the weather today
+    - what's the weather like
+    - hows the weather going to be
+
+- intent: weather_country
+  examples: |
+    - what the weather in [Norway](country)
+    - what's the temperature in [Spain](country)
+    - how is the weather in [Poland](country)
+    - can you tell me the weather in [France](country)
+    - how is the temperature in [Portugal](country)
+
+- intent: weather_day_forecast
+  examples: |
+    - what is the weather forecast for next hours
+    - what will be the weather in the next hours
+    - tell me the weather for the next hours
+
+- intent: weather_next_day_forecast
+  examples: |
+    - tell me the weather for tomorrow
+    - I want to know the weather tomorrow
+    - what will be the weather tomorrow
+    - what will be the temperature tomorrow
+    - tomorrow weather
+    - how the weather going to be tomorrow
+    - tell me the temperature for tomorrow
+    - I want to know the temperature for tomorrow
+    - tomorrow temperature
+    - how the temperature going to be tomorrow
+    - what is the weather forecast for tomorrow
+
+- intent: wind
+  examples: |
+    - what's the wind direction
+    - what's the wind speed
+    - how is the wind today
+    - what's the wind like today
+    - wind information
+
+- intent: humidity
+  examples: |
+    - what's the humidity
+    - what's the humidity today
+    - how is the humidity
+    - what's the humidity like today
+    - humidity information
+
+- intent: pressure
+  examples: |
+    - what's the pressure
+    - what's the pressure today
+    - how is the pressure
+    - what's the pressure like today
+    - pressure information
+
+- intent: precipitation
+  examples: |
+    - what's the probabilities of precipitation
+    - there are probabilities of rain
+    - it will rain today
+    - it will rain tomorrow
+    - rain information
+
+- intent: weather_city
+  examples: |
+    - tell me the weather in [Paris](location)
+    - I want to know the weather in [London](location)
+    - weather for [Athens](location) please
+    - what's the weather today in [Berlin](location)
+    - what's the temperature in [Washington](location) right now
+    - hows the weather in [Brussels](location)
+    - i want the temperature at [Rome](location)
+    - what the weather like in [Praga](location)
+    - what the weather in [Naples](location)
+
+- intent: temperature_city
+  examples: |
+    - tell me the temperature in [Budapest](location)
+    - how many degrees are in [Praga](location)
+    - what's the temperature right now in [Valencia](location)
+    - i want to know the temperature in [Hamburg](location)
+    - what the temperature in [Madrid](location)
+
+- intent: precipitation_city
+  examples: |
+    - what's the probabilities of precipitation in [Istambul]
+    - can you tell me the precipitation in [Paris]
+    - with which probabilities it will rain today in [Prague]
+    - i want to know the precipitation in [Frankfurt]
+    - rain information in [Copenhage]
+
+- intent: weather_next_day_forecast_city
+  examples: |
+    - tell me the weather for tomorrow in [Vienna](location)
+    - I want to know the weather tomorrow in [Marsella](location)
+    - what will be the weather tomorrow in [Berlin](location)
+    - what will be the temperature tomorrow in [Roma](location)
+    - tomorrow weather in [Milan](location)
+    - how the weather going to be tomorrow in [Praga](location)
+    - tell me the temperature for tomorrow in [Estambul](location)
+    - I want to know the temperature for tomorrow in [Stockolm](location)
+    - tomorrow temperature in [Marmo](location)
+    - how the temperature going to be tomorrow in [Bruselas](location)
+    - what is the weather forecast for tomorrow in [Berlin](location)
+
+- intent: wind_city
+  examples: |
+    - tell me the wind in [Paris](location)
+    - I want to know the wind in [London](location)
+    - wind for [Athens](location) please
+    - what's the wind today in [Berlin](location)
+    - what's the wind in [Washington](location) right now
+    - hows the wind in [Brussels](location)
+    - i want information of the wind at [Rome](location)
+
+- intent: humidity_city
+  examples: |
+    - tell me the humidity in [Paris](location)
+    - tell me the humidity for [Paris](location)
+    - I want to know the humidity in [London](location)
+    - humidity for [Athens](location) please
+    - what's the humidity today in [Berlin](location)
+    - what the humidity in [Berlin](location)
+    - what's the humidity in [Washington](location) right now
+    - hows the humidity in [Brussels](location)
+    - i want information of the humidity at [Rome](location)
+
+- intent: city
+  examples: |
+    - [Liverpool](location)
+    - [Milan](location)
+    - [Frankfurt](location)
+    - [Porto](location)
+    - [Madrid](location)
+    - [Barcelona](location)
+    - [Oslo](location)
+    - [Prague](location)
+    - [Budapest](location)
+    - [Berlin](location)
+    - [Hamburg](location)
+    - [Seville](location)
+    - [Paris](location)
+    - [Stockolm](location)
+    - [Amsterdam](location)
+    - [Rotterdam](location)
+    - [Munich](location)
+    - [Valencia](location)
+    - [Sofía](location)
+    - [Warsov](location)
+    - [Montevideo](location)
+    - [Moscu](location)
+    - [Istambul](location)
+    - [Marseilla](location)
+    - [Malmo](location)
+    - [Vienna](location)
+    - [Lisbon](location)
+    - [Porto](location)
+    - [Copenhage](location)
+    - [Naples](location)
+    - [Rome](location)
+
+- intent: country
+  examples: |
+    - [Norway](country)
+    - [Sweeden](country)
+    - [Spain](country)
+    - [France](country)
+    - [Poland](country)
+    - [Italy](country)
+    - [Germany](country)
+    - [Portugal](country)
+    - [Hungary](country)
+    - [Bulgary](country)
+    - [Finland](country)
+    - [Denmark](country)
+    - [Ireland](country)
+    - [United Kingdom](country)
+    - [Greece](country)
+    
+  

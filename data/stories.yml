@@ -1,0 +1,125 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: ask weather for city happy path
+  steps:
+  - intent: weather_country
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask humidity for city happy path
+  steps:
+  - intent: humidity
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask wind for city happy path
+  steps:
+  - intent: wind
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask temperature for city happy path
+  steps:
+  - intent: temperature
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask pressure for city happy path
+  steps:
+  - intent: pressure
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask precipitation for city happy path
+  steps:
+  - intent: precipitation
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask weather day forecast for city happy path
+  steps:
+  - intent: weather_day_forecast
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+
+- story: ask weather happy path
+  steps:
+  - intent: weather
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Madrid
+  - slot_was_set:
+    - location: Madrid
+  - action: action_get_weather
+  - slot_was_set:
+    - location: null
+
+- story: ask weather with city happy path
+  steps:
+  - intent: weather_city
+    entities:
+    - location: Rome
+  - slot_was_set:
+    - location: Rome
+  - action: action_get_weather
+  - slot_was_set:
+    - location: null
