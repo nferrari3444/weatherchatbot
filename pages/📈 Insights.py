@@ -5,10 +5,6 @@ import plotly.express as px
 
 st.set_page_config(page_title="View Query Insights", page_icon="📈")
 
-
-
-
-
 file = './query_insights.csv'
 @st.cache_data
 def load_data(file):
@@ -61,6 +57,14 @@ def topIntents(query_data, date_selected):
 
 st.title("Location Queries Evolution")
 st.write("Number of queries for each location over time")
+
+st.sidebar.text_area(
+    "Get relevant insights",
+    "Based in the graph on the right side, uses can get insights and valuable information "
+    "about query trends for the relevant cities, as well as the behaviour of the weather"
+    "among the cities", height=200
+    )
+
 
 locationQueries(data)
 

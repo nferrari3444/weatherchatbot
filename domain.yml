@@ -28,6 +28,7 @@ intents:
   - weather_next_day_forecast_city
   - pressure_city
   - visibility_city
+  - weather_day_forecast_city
 
 responses:
   utter_greet:

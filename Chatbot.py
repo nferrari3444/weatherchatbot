@@ -11,6 +11,8 @@ import datetime
 from datetime import timedelta
 from utils import query_records
 
+st.set_page_config(page_title="Chatbot", page_icon="🤖")
+
 st.title("Welcome to the Weather Chatbot")
 
 # Initialize chat history
@@ -41,16 +43,18 @@ with st.sidebar:
     ("what the humidity in Munich?", "humidity"),
 )
     tagger_component('Common Weather Queries:', 
+                     
                      ['weather','temperature','humidity','wind','weather forecast',
                       'precipitation', 'tomorrow temperature'] ,
 
-                      color_name=["blue", "orange", "lightblue", "purple", "pink","brown", "yellow"],)
+                      color_name=["blue", "orange", "lightblue", "purple", "pink","brown", "yellow"])
 
     tagger_component('Cities Popular Queries:', 
+                     
                      ['Berlin','Hamburg','Prague','Rome','Budapest' ,'Vienna',
                       'Madrid'] ,
 
-                      color_name=["skyblue", "black", "red", "green", "pink","lightgreen", "yellow"],)
+                      color_name=["skyblue", "black", "red", "green", "pink","lightgreen", "yellow"])
 
 
 # Display chat messages from history on app rerun

@@ -125,6 +125,7 @@ nlu:
     - what will be the weather tomorrow
     - what will be the temperature tomorrow
     - tomorrow weather
+    - what is tomorrow weather
     - how the weather going to be tomorrow
     - tell me the temperature for tomorrow
     - I want to know the temperature for tomorrow
@@ -216,6 +217,13 @@ nlu:
     - how the temperature going to be tomorrow in [Bruselas](location)
     - what is the weather forecast for tomorrow in [Berlin](location)
 
+- intent: weather_day_forecast_city
+  examples: |
+    - what is the weather forecast for next hours in [Bucharest](location)
+    - what will be the weather in the next hours in [Dublin](location)
+    - tell me the weather for the next hours in [Cork](location)
+    - what's the weather for the next hours in [Warsaw](location)
+
 - intent: wind_city
   examples: |
     - tell me the wind in [Paris](location)
@@ -233,6 +241,7 @@ nlu:
     - visibility for [Athens](location) please
     - what's the visibility today in [Munich](location)
     - what's the visibility in [Naples](location) right now
+    - what's the visibility in [Madrid](location)
     - how is the visibility in [Florence](location)
     - i want information of the visibility at [Milan](location)
 
@@ -319,6 +328,10 @@ nlu:
     - [Warsaw](location)
     - [Krakow](location)
     - [Brussels](location)
+    - [Bucharest](location)
+    - [Dublin](location)
+    - [Cork](location)
+    - [Helsinky](location)
 
 
 - intent: country

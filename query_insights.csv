@@ -1,37 +1,37 @@
 "date","intent","location"
-2024-02-06,"temperature_city","Munich"
+2024-02-06,temperature_city,Munich
 
-2024-02-06,"temperature_city","Sofia"
+2024-02-06,temperature_city,Sofia
 
-2024-02-06,"weather_city","Sofia"
+2024-02-06,weather_city,Sofia
 
-2024-02-06,"humidity_city","Barcelona"
+2024-02-06,humidity_city,Barcelona
 
-2024-02-06,"humidity_city","Amsterdam"
+2024-02-06,humidity_city,Amsterdam
 
-2024-02-06,"humidity_city","Berlin"
+2024-02-06,humidity_city,Berlin
 
-2024-02-06,"humidity_city","Prague"
+2024-02-06,humidity_city,Prague
 
-2024-02-06,"weather_city","Copenhagen"
+2024-02-06,weather_city,Copenhagen
 
-2024-02-06,"temperature_city","Copenhagen"
+2024-02-06,temperature_city,Copenhagen
 
-2024-02-06,"temperature_city","Amsterdam"
+2024-02-06,temperature_city,Amsterdam
 
-2024-02-06,"temperature_city","Munich"
+2024-02-06,temperature_city,Munich
 
-2024-02-06,"temperature_city","Madrid"
+2024-02-06,temperature_city,Madrid
 
-2024-02-06,"temperature_city","Barcelona"
+2024-02-06,temperature_city,Barcelona
 
-2024-02-06,"weather_next_day_forecast_city","Berlin"
+2024-02-06,weather_next_day_forecast_city,Berlin
 
-2024-02-06,"weather_next_day_forecast_city","Berlin"
+2024-02-06,weather_next_day_forecast_city,Berlin
 
-2024-02-06,"temperature_city","Istambul"
+2024-02-06,temperature_city,Istambul
 
-2024-02-06,"weather_city","Istambul"
+2024-02-06,weather_city,Istambul
 
 2024-02-06,weather_next_day_forecast_city,Vienna
 
@@ -87,3 +87,47 @@
 
 2024-02-07,weather_next_day_forecast_city,Budapest
 
+2024-02-07,temperature_city,Vienna
+
+2024-02-07,weather_city,Vienna
+
+2024-02-07,wind_city,Frankfurt
+
+2024-02-07,temperature_city,Berlin
+
+2024-02-07,temperature_city,Milano
+
+2024-02-07,weather_city,Milano
+
+2024-02-07,visibility_city,Rome
+
+2024-02-07,visibility_city,Madrid
+
+2024-02-07,weather_next_day_forecast_city,Vienna
+
+2024-02-07,weather_next_day_forecast_city,Vienna
+
+2024-02-07,visibility_city,Prague
+
+2024-02-07,weather_day_forecast_city,Hamburg
+2024-02-08,weather_day_forecast_city,Dublin
+2024-02-08,weather_day_forecast_city,Dublin
+2024-02-08,weather_day_forecast_city,Dublin
+2024-02-08,weather_day_forecast_city,Dublin
+2024-02-08,weather_day_forecast_city,Hamburg
+2024-02-08,weather_day_forecast_city,Hamburg
+2024-02-08,weather_day_forecast_city,Hamburg
+2024-02-08,weather_day_forecast_city,Hamburg
+2024-02-08,temperature_city,Cophenagen
+2024-02-08,temperature_city,Oslo
+2024-02-08,humidity_city,Berlin
+2024-02-08,humidity_city,Berlin
+2024-02-08,weather_city,Hamburg
+2024-02-08,temperature_city,Hamburg
+2024-02-08,precipitation_city,Roma
+2024-02-08,weather_next_day_forecast_city,Roma
+2024-02-08,weather_next_day_forecast_city,Roma
+2024-02-08,weather_city,Rome
+2024-02-08,visibility_city,Prague
+2024-02-08,weather_city,Rome
+2024-02-08,wind_city,Paris
