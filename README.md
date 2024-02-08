@@ -20,3 +20,4 @@ pip install -r requirements.txt
 
 8- A new window in the browser will be opened with our application. Now you are able to interact and start to make questions to our bot.
 
+![alt text](image.png)
