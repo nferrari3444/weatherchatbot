@@ -1,4 +1,4 @@
-"# Streamlit Chatbot Weather Application with RASA and Python-Weather" 
+# Streamlit Chatbot Weather Application with RASA and Python-Weather
 
 In order to run the application locally you need to follow these steps:
 
