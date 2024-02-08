@@ -5,7 +5,9 @@ import plotly.express as px
 
 st.set_page_config(page_title="View Query Insights", page_icon="📈")
 
+# CSV file where the application store all the intents and locations queries.
 file = './query_insights.csv'
+
 @st.cache_data
 def load_data(file):
     

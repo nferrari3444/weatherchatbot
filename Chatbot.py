@@ -68,8 +68,10 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
 
   async with python_weather.Client(unit=python_weather.METRIC) as client:
      
-      weather = await client.get(location)
 
+      weather = await client.get(location)
+    
+      
       if forecast_next_day:
         year = datetime.datetime.now().year  
         month = datetime.datetime.now().month
@@ -197,11 +199,12 @@ if __name__ == '__main__':
             st.markdown(inputUser)
             st.session_state.messages.append({"role": "user", "content": inputUser}) 
             
-
+            # Parse User Input with Rasa Model
             data = modelResponse(inputUser)
             
 
         with st.chat_message("assistant"):
+            # Return response about weather queries, ask for cities or other stuff.
             response = botResponse(data, inputUser)
             st.write(response)
             st.session_state.messages.append({"role": "assistant", "content": response}) 
