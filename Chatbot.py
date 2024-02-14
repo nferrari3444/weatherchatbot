@@ -151,24 +151,29 @@ def botResponse(modelData, userInput):
     intent = modelData['intent']['name']
     print('intent is', intent)
     if intent == 'weather_city' or intent == 'weather_next_day_forecast_city'  or intent == 'weather_day_forecast_city' or intent == 'humidity_city' or intent == 'wind_city' or intent == 'temperature_city' or intent == 'precipitation_city' or intent == 'pressure_city' or intent == 'visibility_city':
-        location = modelData['entities'][0]['value']
         
-        print('llega aca con el intent {}'.format(intent))
-
-        if intent == 'weather_next_day_forecast_city':
-            forecast_next_day = True
-        if intent == 'weather_day_forecast_city':
-            forecast_day = True
-
-        query_info = {'date': currentDate, 'intent':intent, 'location':location}
-        query_records(query_info)
-        st.session_state.queries.append({'date': currentDate, 'intent': intent, 'location':location})
-
-        if os.name == 'nt':
-            asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
-        return asyncio.run(getweather(location, intent, forecast_next_day, forecast_day))
+        try:
+            location = modelData['entities'][0]['value']
         
+            print('llega aca con el intent {}'.format(intent))
+
+            if intent == 'weather_next_day_forecast_city':
+                forecast_next_day = True
+            if intent == 'weather_day_forecast_city':
+                forecast_day = True
+
+            query_info = {'date': currentDate, 'intent':intent, 'location':location}
+            query_records(query_info)
+            st.session_state.queries.append({'date': currentDate, 'intent': intent, 'location':location})
+
+            if os.name == 'nt':
+                asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
+            return asyncio.run(getweather(location, intent, forecast_next_day, forecast_day))
+        
+        except IndexError:
+            response = 'Sorry,the assistent answer questions about weather in main cities. Make the question again please!'
+            return response
         
     else:
 
