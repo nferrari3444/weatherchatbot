@@ -11,7 +11,7 @@ file = './query_insights.csv'
 @st.cache_data
 def load_data(file):
     
-    return pd.read_csv(file, sep=',')
+    return pd.read_csv(file, sep=',', encoding='unicode_escape')
 
 data = load_data(file)
 
