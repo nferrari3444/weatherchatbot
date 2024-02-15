@@ -92,23 +92,25 @@ async def getweather(location, intent, forecast_next_day, forecast_day):
             return data 
 
       if forecast_day:
-         currentHour = datetime.datetime.now().time().hour 
-
-         for forecast in weather.forecasts:
+        currentHour = datetime.datetime.now().time().hour 
+        print('forecast day in api call is {}'.format(forecast_day))
+        for forecast in weather.forecasts:
             for hourly in forecast.hourly:
-                
-                if  hourly.time.hour -  currentHour == 6:
+                print('hourly.time.hour',hourly.time.hour)
+
+                print('currentHour', currentHour)
+                if  hourly.time.hour -  currentHour <= 6:
                     description = hourly.description
                     temperature = hourly.temperature
                     print('---------------------------------------------------------------------')
-                    print('The weather for the next 6 hours in {} will be {} with a temperature of {}'.format(location, description,temperature))
+                    print('The weather for the next hours in {} will be {} with a temperature of {}'.format(location, description,temperature))
       
                 
                     query_info = {'date': currentDate, 'intent':intent, 'location':location}
                     query_records(query_info)
                     st.session_state.queries.append({'date': currentDate, 'intent':intent, 'location':location})
                     
-                    data = 'The weather for the next 6 hours in {} will be {} with a temperature of {}'.format(location, description,temperature)
+                    data = 'The weather for the next hours in {} will be {} with a temperature of {}'.format(location, description,temperature)
 
                     return data
       else:
@@ -160,6 +162,7 @@ def botResponse(modelData, userInput):
             if intent == 'weather_next_day_forecast_city':
                 forecast_next_day = True
             if intent == 'weather_day_forecast_city':
+                print('weather_day_forecast_city intent')
                 forecast_day = True
 
             query_info = {'date': currentDate, 'intent':intent, 'location':location}
