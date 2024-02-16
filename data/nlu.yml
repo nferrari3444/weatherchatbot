@@ -223,6 +223,8 @@ nlu:
     - what will be the weather in the next hours in [Dublin](location)
     - tell me the weather for the next hours in [Cork](location)
     - what's the weather for the next hours in [Warsaw](location)
+    - temperature for next hours in [Berlin](location)
+    - next hour temperature in [Rome](location)
 
 - intent: wind_city
   examples: |
